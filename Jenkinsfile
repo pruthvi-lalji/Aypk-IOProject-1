@@ -5,7 +5,7 @@ pipeline {
     DOCKER_ACCOUNT = "oabuoun"
     REGISTRY = "$DOCKER_ACCOUNT" + "/" + "$CONTAINER_NAME"
     IMAGE_NAME = "$REGISTRY" + ":" + "$BUILD_NUMBER"
-    REGISTRY_CREDENTIALS = "docker_auth"
+    REGISTRY_CREDENTIALS = "docker_hub"
     DOCKER_IMAGE = ''
   }
 
