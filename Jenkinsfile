@@ -34,7 +34,7 @@ pipeline {
     	steps {
         script {
           sh '''
-            docker run --rm -v $PWD/test-results:/reports --workdir $PROJECT_DIR --name $CONTAINER_NAME $IMAGE_NAME pytest -v --junitxml=/reports/results.xml
+            docker run --rm -v $PWD/test-results:/app/target/surefire-reports --workdir $PROJECT_DIR --name $CONTAINER_NAME $IMAGE_NAME mvn test
           '''
         }
       }
